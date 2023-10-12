@@ -1,0 +1,32 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "QtBuild",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:Qt_KIT_DIR}/bin"
+                }
+            ],
+            "linux": {
+                "miDebuggerPath": "gdb"
+            },
+            "osx": {
+                "miDebuggerPath": "/path/to/lldb"
+            },
+            "windows": {
+                "miDebuggerPath": "${env:MinGW_PATH}/bin/gdb.exe"
+            },
+            "externalConsole": false,
+            "visualizerFile": "/home/peter/.config/Code/User/workspaceStorage/bdd59b6f4908849e2f04879468d75c50/tonka3000.qtvsctools/qt.natvis.xml"
+        }
+    ]
+}

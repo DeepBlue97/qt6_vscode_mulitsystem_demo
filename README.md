@@ -2,7 +2,7 @@
 
 
 # Environment Setup
-## Window11
+## Windows 11
 
 1. Modify `PATH`
     
@@ -13,7 +13,7 @@
     MinGW_PATH=C:\Qt\Tools\mingw1120_64
     ```
 
-    PATH中添加e.g.
+    Add to PATH e.g.
     ```
     C:\Qt\Tools\CMake_64\bin
     C:\Qt\Tools\mingw1120_64\bin
@@ -21,8 +21,9 @@
     C:\Qt\6.5.3\mingw_64
     ```
 
-    验证环境
-    打开CMD，依次输入
+    Verify it
+
+    open CMD，execute one by one
     ```
     cmake --version
     g++ --version
@@ -30,16 +31,48 @@
 
 2. Install and config VSCode plugins
 
-    1. Qt tool, for open QDesigher etc.
-    2. Qt Configure
-        - Mingw Path: e.g. `C:\Qt\Tools\mingw1120_64`
-        - Qt Dir: e.g. `C:\Qt`
-        - Qt Kit Dir: e.g. `C:\Qt\6.5.3\mingw_64`
-    3. C++
-    4. cmake
+    1. Qt tool: for open QDesigher etc.
+    2. Qt Configure: for config and new projects etc.
+        - Mingw Path: e.g. `${env:MinGW_PATH}`
+        - Qt Dir: e.g. `${env:Qt_DIR}`
+        - Qt Kit Dir: e.g. `${env:Qt_KIT_DIR}`
+    3. C/C++
+    4. Cmake Tool
         - config Cmake Path, e.g. `C:\Qt\Tools\CMake_64\bin\cmake.exe`
 
-3. 
+3. Result
+
+    - Successfully build .exe file and execute it by debug(F5).
+    - issues:
+        - Executing .exe in some powershell terminal(i.e CMake/Build) results nothing while executing in status bar, but can execute it in other terminals e.g cmd, powershell, git etc.
 
 ## Linux
 
+
+1. Add `Qt_KIT_DIR`
+    
+    Add New Variable:
+    ```
+    Qt_KIT_DIR=/usr/local/Qt-6.5.3
+    ```
+
+    Verify it
+
+    open CMD，execute one by one
+    ```
+    echo $Qt_KIT_DIR
+    cmake --version
+    g++ --version
+    ```
+
+2. Install and config VSCode plugins
+
+    1. Qt tool: for open QDesigher etc.
+    2. Qt Configure: for config and new projects etc.
+    3. C/C++
+    4. Cmake Tool
+
+3. Result
+    - Successfully build .exe file and execute it. 
+    - issues:
+        - Executing .exe in some powershell terminal(i.e CMake/Build) results nothing, but can execute it in other terminal.

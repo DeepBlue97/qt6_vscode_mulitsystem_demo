@@ -1,7 +1,13 @@
 cmake_minimum_required(VERSION 3.5) # CMake install : https://cmake.org/download/
 project(test001 LANGUAGES CXX)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_PREFIX_PATH "C:/Qt/6.5.3/mingw_64") # Qt Kit Dir
+
+message(Qt_KIT_DIR: "$ENV{Qt_KIT_DIR}")
+set(CMAKE_PREFIX_PATH "$ENV{Qt_KIT_DIR}") # Qt Kit Dir
+# set(CMAKE_PREFIX_PATH /usr/local/Qt-6.5.3) # Qt Kit Dir
+# message("$ENV{PATH}")
+
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)

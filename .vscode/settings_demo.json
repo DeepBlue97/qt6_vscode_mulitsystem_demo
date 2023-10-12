@@ -1,0 +1,7 @@
+{
+    "qtConfigure.qtKitDir": "${env:Qt_KIT_DIR}",
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "new": "cpp"
+    }
+}
