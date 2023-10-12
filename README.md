@@ -6,6 +6,13 @@
 
 1. Modify `PATH`
     
+    Add New Variable:
+    ```
+    Qt_KIT_DIR=C:\Qt\6.5.3\mingw_64
+    Qt_DIR=C:\Qt
+    MinGW_PATH=C:\Qt\Tools\mingw1120_64
+    ```
+
     PATH中添加e.g.
     ```
     C:\Qt\Tools\CMake_64\bin
