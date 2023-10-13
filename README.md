@@ -33,16 +33,18 @@
 
     1. Qt tool: for open QDesigher etc.
     2. Qt Configure: for config and new projects etc.
-        - Mingw Path: e.g. `${env:MinGW_PATH}`
+        - Mingw Path: e.g `${env:MinGW_PATH}`
         - Qt Dir: e.g. `${env:Qt_DIR}`
-        - Qt Kit Dir: e.g. `${env:Qt_KIT_DIR}`
+        - Qt Kit Dir: e.g `${env:Qt_KIT_DIR}`
     3. C/C++
     4. Cmake Tool
-        - config Cmake Path, e.g. `C:\Qt\Tools\CMake_64\bin\cmake.exe`
+        - Cmake Path, e.g `C:\Qt\Tools\CMake_64\bin\cmake.exe`
+        - Build Directory: `${workspaceFolder}/build-windows`
 
 3. Result
 
     - Successfully build .exe file and execute it by debug(F5).
+    - Successfully build .exe file and execute it by `cmake -B build-windows` and `cmake --build build-windows`
     - issues:
         - Executing .exe in some powershell terminal(i.e CMake/Build) results nothing while executing in status bar, but can execute it in other terminals e.g cmd, powershell, git etc.
 
@@ -67,12 +69,13 @@
 
 2. Install and config VSCode plugins
 
-    1. Qt tool: for open QDesigher etc.
+    1. Qt tool: for open QDesigher etc. (failed in Linux)
     2. Qt Configure: for config and new projects etc.
     3. C/C++
     4. Cmake Tool
+        - Build Directory: `${workspaceFolder}/build-windows`
 
 3. Result
-    - Successfully build .exe file and execute it. 
-    - issues:
-        - Executing .exe in some powershell terminal(i.e CMake/Build) results nothing, but can execute it in other terminal.
+    - Debug(F5): Successfully build .exe file and execute it. 
+    - Tool Bar Build: Successfully build .exe file and execute it. 
+    - CLI: Successfully build .exe file and execute it by `cmake -B build-linux` and `cmake --build build-linux`.
